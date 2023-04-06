@@ -15,288 +15,61 @@
 
   <title>Add Remove Dish</title>
 
-  <style>
-    #deleteItems h3 {
-      color: red;
-    }
+  <style></style>
 
-    #addItems h3 {
-      color: blue;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    select#dishImageSet option[value="Chicken Wing Set"] {
-      background-image: url(/images/Chicken_Wing_Set.jpg);
-    }
-  </style>
 
 </head>
 
 <body>
   <!-- Insert Navbar page below -->
-  <!-- <div id="navbar"></div> -->
-
+  <div id="navbar"></div>
 
   <!-- Create your form here to input new product after login -->
   <div class="container" id="itemForm">
+    
     <header>
-      <h1> Add & Remove Dish Name, Side Dish and Picture</h1>
+      <!-- <h1> Add & Remove Dish Name, Side Dish and Picture</h1> -->
+      <h1>Create A Dish Set</h1>
     </header>
     <hr>
-    <section id="deleteItems">
 
-      <div class="removeDishName mt-3 ">
-        <h3>Delete A Dish Name From List</h3>
-        <form action="/action_page.php">
-          <label for="dishName" class="form-label">Choose Dish Name from the list To Remove:</label>
-          <input class="form-control" id="dishName" name="dishName" list="dishNames">
-          <datalist id="dishNames">
-            <!-- <option value=""> 
-            <option value="Chicken Wing Set">
-            <option value="Fish Set">
-            <option value="Rendang Beef Set">
-            <option value="Sambal Sotong Set"> -->
-
-          </datalist>
-          <button type="submit" class="btn btn-danger mt-3">Remove</button>
-        </form>
-      </div>
-
-      <div class="removeSideDish mt-3">
-        <h3>Delete A Side Dish From List</h3>
-        <form action="/action_page.php">
-          <label for="sideDish" class="form-label">Choose Side Dish from the list To Remove:</label>
-          <input class="form-control" id="sideDish" name="sideDish" list="sideDishes">
-          <datalist id="sideDishes">
-            <!-- <option value=""> 
-            <option value="Chicken Wing">
-            <option value="Fish">
-            <option value="Rendang Beef">
-            <option value="Sambal Sotong">
-            <option value="Egg Sunny">
-            <option value="Ikan Bilis">
-            <option value="Luncheon Meat">
-            <option value="Otah"> -->
-          </datalist>
-          <button type="submit" class="btn btn-danger mt-3">Remove</button>
-        </form>
-      </div>
-
-      <div class="removeImage mt-3">
-        <h3>Delete An Image From List</h3>
-        <form action="/action_page.php">
-          <label for="image" class="form-label">Choose Picture from the list To Remove:</label>
-          <input class="form-control" id="image" name="image" list="images">
-          <datalist id="images">
-            <option img src="">
-            <option img src="Chicken_Wing_Set.jpeg">
-            <option img src="Fish_Set.jpeg">
-            <option img src="Rendang_Beef.jpeg">
-            <option img src="Sambal_Sotong Set.jpeg">
-          </datalist>
-          <button type="submit" class="btn btn-danger mt-3">Remove</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="addItems">
+    <form>
 
       <div class="addDish mt-3">
-        <h3>Add Dish Name To List</h3>
-        <form onSubmit="event.preventDefault(); addDishForm();">
-          <div class="input-group mt-3">
-            <!-- <label for="addDishName" class="form-control"></label> -->
-            <input type="text" id="addDishName" class="form-control" placeholder="Type (Dish Name) Set" />
-            <button class="btn btn-primary" type="submit">Add</button>
-            <!-- <button class="btn btn-danger" type="button">Cancel</button> -->
-          </div>
-        </form>
-        <p id="outputDishName"></p>
-      </div>
-
-      <div class="addSideDish mt-3">
-        <h3>Add Side Dish To List</h3>
-        <form onSubmit="event.preventDefault(); addSideDishForm();">
-          <div class="input-group mt-3">
-            <input type="text" id="addSideDishName" class="form-control" placeholder="Type Side Dish Name">
-            <button class="btn btn-primary" type="submit">Add</button>
-            <!-- <button class="btn btn-danger" type="button">Cancel</button> -->
-          </div>
-        </form>
-        <p id="outputSideDish"></p>
-      </div>
-
-      <div class="addFigure mt-3">
-        <h3>Add Picture To List</h3>
-        <form onSubmit="event.preventDefault(); addImageForm();">
-          <div class="input-group mt-3">
-            <input type="image" id="addImage" class="form-control" placeholder="Insert the Picture">
-            <button class="btn btn-primary" type="button">Add</button>
-            <!-- <button class="btn btn-danger" type="button">Cancel</button> -->
-          </div>
-        </form>
-      </div>
-
-    </section>
-
-    <br>
-
-    <section class="createDishSet">
-      <h1> Create A Dish Set</h1>
-
-      <div class="selectDishName mt-3">
-
-        <form onSubmit="event.preventDefault(); addDishSetForm();"></form>
-        <label for="dishNameSet" class="form-label">Select Dish Name list (select one):</label>
-        <select class="form-select" id="dishNameSet" name="dishNameSet">
-          <!-- <option></option>  -->
-          <!-- <option>Chicken Wing Set</option> 
-            <option>Fish Set</option>
-            <option>Rendang Beef Set</option>
-            <option>Sambal Sotong Set</option>-->
-        </select>
-        <button class="btn btn-warning" type="button">Confirm</button>
-        </form>
+        <h3>Add Dish Name </h3>
+        <label for="addDishName" class="form-control"></label>
+        <input type="text" id="addDishName" class="form-control" placeholder="Input Dish Name" />
       </div>
 
       <div class="selectSideDish mt-3">
-
-        <p>Select Side Dish below for the Set (Multiple Selection)</p>
+        <h3>Add Side Dish (Multiple Selection)</h3>
         <p id="selectSideDishes"></p>
-        <!-- <div class="form-check"> 
-            <input type="checkbox" class="form-check-input" id="sideDish1" name="sideDish1" value="1" checked>
-            <label class="form-check-label" for="sideDish1">Chicken Wing</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish2" name="sideDish2" value="2" />
-            <label class="form-check-label" for="sideDish2">Fish</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish3" name="sideDish3" value="3" />
-            <label class="form-check-label" for="sideDish3">Rendang Beef</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish4" name="sideDish4" value="4" />
-            <label class="form-check-label" for="sideDish4">Sambal Sotong</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish5" name="sideDish5" value="5" />
-            <label class="form-check-label" for="sideDish5">Egg Sunny</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish6" name="sideDish6" value="6" />
-            <label class="form-check-label" for="sideDish6">Ikan Bilis</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish7" name="sideDish7" value="7" />
-            <label class="form-check-label" for="sideDish7">Luncheaon Meat</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="sideDish8" name="sideDish8" value="8" />
-            <label class="form-check-label" for="sideDish8">Otah</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" disabled>
-            <label class="form-check-label">Lobster</label>
-          </div>-->
-        <button class="btn btn-warning" type="button">Confirm</button>
       </div>
 
       <div class="addPriceSet mt-3">
-        <form onSubmit="event.preventDefault(); priceSetForm();">
-          <label for="priceDishSet" class="form-label">Key The Price Per Set</label>
-          <span class="input-group-text"> SGD
-            <input type="integer" class="form-control" id="priceDishSet" placeholder="Price In Number" />
-          </span>
-          <button class="btn btn-warning" type="submit">Confirm</button>
-        </form>
-        <p id="outputPrice"></p>
+        <h3>Add Price</h3>
+        <label for="priceDishSet" class="form-label"></label>
+        <span class="input-group-text"> SGD
+          <input type="integer" class="form-control" id="priceDishSet" placeholder="Key in Price In Number" />
+        </span>
+
       </div>
 
       <div class="selectDishImage mt-3">
-        <form onSubmit="event.preventDefault();">
-          <label for="dishImageSet" class="form-label">Select Picture for Dish list (select one):</label>
-          <select class="form-select" id="dishImageSet" name="dishImageSet">
-            <option></option>
-            <option img src="images/Chicken_Wing_Set.jpg" class="figure-img img-fluid rounded">Chicken Wing Set
-            </option>
-            <option> <img src ="images/Chicken_Wing_Set.jpg">Fish Set</img></option>
-            <option>Rendang Beef Set</option>
-            <option>Sambal Sotong Set</option>
-          </select>
-          <button class="btn btn-warning" type="submit">Confirm</button>
-        </form>
-
-        <b><a img src="images/Chicken_Wing_Set.jpg"></a></b>
-
-      </div>
-      <div>
-        <button type="submit" class="btn btn-primary mt-3" onclick="DishSetTable()">Submit</button>
-
+        <h3>Add Picture</h3>
+        <label for="myImage" class="form-label">Select a Picture</label>
+        <input type="file" id="myImage" name="myImage"><br><br>
       </div>
 
-
-    </section>
+    </form>
+    <button class="btn btn-primary" type="submit" onclick="dishSet()">submit</button>
   </div>
-
-
-  <div class="container table">
-    <hr>
-    <hr>
-    <h3> Nasi Lemak Set Table / Object</h3>
-
-    <table class="table table-bordered border-primary">
-      <thead>
-        <tr>
-          <th scope="col"># ID</th>
-          <th scope="col">Database</th>
-        </tr>
-      <tbody>
-        <tr>
-          <th scope="row">#Table ID</th>
-          <td>01</td>
-        </tr>
-        <tr>
-          <th scope="row">#dishNameSet</th>
-          <td>Chicken Wing Set</td>
-        </tr>
-        <tr>
-          <th scope="row">#sideDish1</th>
-          <td>Chicken Wing</td>
-        </tr>
-        <tr>
-          <th scope="row">#sideDish5</th>
-          <td>Egg Sunny</td>
-        </tr>
-        <tr>
-          <th scope="row">#sideDish6</th>
-          <td>Ikan Billis</td>
-        </tr>
-        <tr>
-          <th scope="row">#priceDishSet</th>
-          <td>4.50</td>
-        </tr>
-        <tr>
-          <th scope="row">#dishImageSet</th>
-          <td><img src="images/Chicken_Wing_Set.jpg" class="figure-img img-fluid rounded" alt="Set A Chicken Wing" />
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
 
 
 
 
   <!-- Insert footer page -->
-  <!-- <div id="footer"></div> -->
+  <div id="footer"></div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -309,17 +82,15 @@
 
 
 
-
   <!-- To load the html snippit file below -->
-  <!-- <script> 
-      $(document).ready(function()
-    {
-      $("#navbar").load("common/navbar.html");  
+  <script>
+    $(document).ready(function () {
+      $("#navbar").load("common/navbar.html");
       $("#footer").load("common/footer.html");
 
     });
-              
-    </script>-->
+
+  </script>
 
 
 
