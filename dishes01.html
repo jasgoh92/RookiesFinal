@@ -13,23 +13,7 @@
     <title>Dishes</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md fixed-top bg-success" data-bs-theme="dark">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"
-            ><img src="images/logo.jpg" width="50" height="30" alt="nasi lemak"
-          /></a>
-        </div>
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">About Us</a>
-            <a class="nav-link active" href="#">Dishes List</a>
-            <a class="nav-link" href="#">Form</a>
-        </ul>
-      </div>
-    </nav>
-    <!-- Insert Navbar -->
-    <!-- <div id="navbar"></div> -->
+
     <div id="dishes02"></div>
 
     <h1 class="text-primary text-center" style="margin-top: 100px;">Dishes List</h1>
@@ -198,19 +182,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        // $( "#navbar" ).load( "common/navbar.html" );
-        // $( "#footer" ).load( "common/footer.html" );
+        $( "#navbar" ).load( "common/navbar.html" );
+        $( "#footer" ).load( "common/footer.html" );
         $("#dishes02").load("dishes02.html");
       });
     </script>
-    <!--Footer-->
-    <footer class="footer mt-5 py-3 bg-light fixed-bottom">
-      <div class="container">
-        <span class="text-info"
-          >Copyright &copy; Group 7 <b>Rookies</b> March 2023 Cohort,
-          All rights reserved.</span
-        >
-      </div>
-    </footer>
-  </body>
+   </body>
 </html>
