@@ -13,173 +13,18 @@
     <title>Dishes</title>
   </head>
   <body>
-
+    <div id="navbar"></div>
     <div id="dishes02"></div>
-
-    <h1 class="text-primary text-center" style="margin-top: 100px;">Dishes List</h1>
-    
-    <div class="container-fluid" style="margin-bottom: 70px;">
-      <div class="row">
-        <div class="col-sm-4 bg-success-subtle">
-          <img
-            class="w-100 pt-2"
-            alt="Full-width image"
-            src="images/nasi1.jpg"
-          />
-          <h6 class="text-center">
-            <b>Nasi Lemak with Chicken $4.80</b>
-          </h6>
-          <p>
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-
-          <button class="btn btn-danger btn-xs">
-            <a
-              class="nav-link"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#dishesModal"
-              >More</a
-            >
-          </button>
-        </div>
-        <div class="col-sm-4 bg-info-subtle">
-          <img
-            class="w-100 pt-2"
-            alt="Full-width image"
-            src="images/nasi2.jpg"
-          />
-          <h6 class="text-center">
-            <b>Nasi Lemak with Blue Pea $4.60</b>
-          </h6>
-          <p>
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-          <button class="btn btn-danger btn-xs">
-            <a
-              class="nav-link"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#dishesModal"
-              >More</a
-            >
-          </button>
-        </div>
-        <div class="col-sm-4 bg-success-subtle">
-          <img
-            class="w-100 pt-2"
-            alt="Full-width image"
-            src="images/nasi4.jpg"
-          />
-          <h6 class="text-center">
-            <b>Nasi Lemak with Long Beans $4.00</b>
-          </h6>
-          <p>
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-          <button class="btn btn-danger btn-xs">
-            <a
-              class="nav-link"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#dishesModal"
-              >More</a
-            >
-          </button>
-        </div>
-        <div class="col-sm-4 bg-info-subtle">
-          <img
-            class="w-100 pt-2"
-            alt="Full-width image"
-            src="images/nasi4.jpg"
-          />
-          <h6 class="text-center">
-            <b>Nasi Lemak with Long Beans $4.00</b>
-          </h6>
-          <p>
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-          <button class="btn btn-danger btn-xs">
-            <a
-              class="nav-link"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#dishesModal"
-              >More</a
-            >
-          </button>
-        </div>
-        <div class="col-sm-4 bg-success-subtle">
-          <img
-            class="w-100 pt-2"
-            alt="Full-width image"
-            src="images/nasi1.jpg"
-          />
-          <h6 class="text-center">
-            <b>Nasi Lemak with Chicken $4.80</b>
-          </h6>
-          <p>
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-          <button class="btn btn-danger btn-xs">
-            <a
-              class="nav-link"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#dishesModal"
-              >More</a
-            >
-          </button>
-        </div>
-        <div class="col-sm-4 bg-info-subtle">
-          <img
-            class="w-100 pt-2"
-            alt="Full-width image"
-            src="images/nasi6.jpg"
-          />
-          <h6 class="text-center">
-            <b>Nasi Lemak with Keropok $4.50</b>
-          </h6>
-          <p>
-            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-          <button class="btn btn-danger btn-xs">
-            <a
-              class="nav-link"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#dishesModal"
-              >More</a
-            >
-          </button>
-        </div>
-      </div>
-    </div>
-
+    <div id = "dishesList"></div>
+    <!-- <div id="footer"></div> -->
+    <div id="footer"></div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="js/dishes01.js"></script>
     <script>
       $(document).ready(function () {
         $( "#navbar" ).load( "common/navbar.html" );
