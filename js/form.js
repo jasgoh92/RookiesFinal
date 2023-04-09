@@ -56,10 +56,12 @@ function dishSet() {
   }
 
   //Display the selected CheckBox values.
+
+  var sideDishList =[];
+
   if (selected.length > 0) {
     // alert("Selected values: " + selected.join(","));
-
-    let sideDishList = [];
+    //let sideDishList = [];
 
     for (let i = 0; i < selected.length; i++) {
 
@@ -68,8 +70,13 @@ function dishSet() {
       console.log(sideDishList)
       document.querySelector("#outputSideDish").innerHTML = `Output Test Run =${sideDishList}`;
     }
-
+    
   }
+
+  
+    addProduct(dishName, "images/logo.jpg", sideDishList, priceDish);
+    displayProduct() 
+
 };
 
 // Below is the test for the set object
@@ -136,4 +143,5 @@ function addProduct(dishName, myImage, sideDishList, priceDish) {
 addProduct("Redang Beef Set", "images/nasi4.jpg", "Rendang Beef,Egg Sunny, Ikan Bilis", "7.50");
 
 displayProduct();
+
 
