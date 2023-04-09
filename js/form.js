@@ -1,7 +1,7 @@
 // Data below received from backend database. Should be updated almost immediately for any changes
 
 const dishNames = ["Chicken Wing Set", "Fish Set", "Rendang Beef Set", "Sambal Sotong Set"];
-const sideDishes = ["Chicken Wing", "Fish", "Rendang Beef", "Sambal Sotong", "Egg Sunny", "Ikan Bilis", "Luncheon Meat", "Otah"];
+const sideDishes = ["Chicken Wing", "Fish", "Rendang Beef", "Sambal Sotong", "Rendang Mutton", "Egg Sunny", "Ikan Bilis", "Luncheon Meat", "Otah"];
 const images = ["img src=(images/Chicken_Wing_Set.jpg)",]
 const priceDishSets = [4.50, 5.00, 6.00, 5.50];
 
@@ -82,16 +82,16 @@ function dishSet() {
 // Below is the test for the set object
 
 const set1 = {
-  dishname: "Chicken Wing Set",
+  name: "Chicken Wing Set",
   image: "images/Chicken_Wing_Set.jpg",
-  sidedish: "Chicken Wing, Ikan Bilis, Egg Sunny",
+  sideDishes: "Chicken Wing, Ikan Bilis, Egg Sunny",
   price: "5.00"
 }
 
 /*const set2 = {
-  dishname: "Fish Set",
+  name: "Fish Set",
   image: "images/nasi1.jpg",
-  sidedish: "Fish, Ikan Bilis, Egg Sunny",
+  sideDishes: "Fish, Ikan Bilis, Egg Sunny",
   price: "6.00"
 }*/
 
@@ -111,8 +111,8 @@ function displayProduct() {
             <img src=${productList[i].image}
                 class="card-img-top" alt="image" />
             <div class="card-body">
-                <h5 class="card-title">${productList[i].dishname}</h5>
-                <p class="card-text">${productList[i].sidedish}</p>
+                <h5 class="card-title">${productList[i].name}</h5>
+                <p class="card-text">${productList[i].sideDishes}</p>
                 <p class="card-price">Unit Price : SGD ${productList[i].price}</p>
             </div>
         </div>
@@ -129,9 +129,9 @@ function addProduct(dishName, myImage, sideDishList, priceDish) {
   // The parameters will be sent in from another function through the argument
 
   const productItem = {
-    dishname: dishName,
+    name: dishName,
     image: myImage,
-    sidedish: sideDishList,
+    sideDishes: sideDishList,
     price: priceDish
   }
 
