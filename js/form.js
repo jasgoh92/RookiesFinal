@@ -1,7 +1,7 @@
 // Data below received from backend database. Should be updated almost immediately for any changes
 
 const dishNames = ["Chicken Wing Set", "Fish Set", "Rendang Beef Set", "Sambal Sotong Set"];
-const sideDishes = ["Chicken Wing", "Fish", "Rendang Beef", "Sambal Sotong", "Rendang Mutton", "Egg Sunny", "Ikan Bilis", "Luncheon Meat", "Otah"];
+const sideDishes = ["Chicken Wing", "Fish", "Rendang Beef", "Sambal Sotong", "Rendang Mutton", "Egg Sunny", "Salted Egg","Ikan Bilis", "Luncheon Meat","Drumstick", "Otah", "Keropok","Tempeh","Long Beans"];
 const images = ["img src=(images/Chicken_Wing_Set.jpg)",]
 const priceDishSets = [4.50, 5.00, 6.00, 5.50];
 
