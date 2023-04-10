@@ -34,10 +34,10 @@ function PreviewImage() {
 function dishSet() {
 
   const dishName = document.querySelector("#addDishName").value;
-  document.querySelector("#outputDish").innerHTML = `Output Test Run = ${dishName}`;
+  // document.querySelector("#outputDish").innerHTML = `Output Test Run = ${dishName}`;
 
   const priceDish = document.querySelector("#priceDishSet").value;
-  document.querySelector("#outputPrice").innerHTML = `Output Test Run = ${priceDish}`;
+  // document.querySelector("#outputPrice").innerHTML = `Output Test Run = ${priceDish}`;
 
   //Create an Array.
   var selected = new Array();
@@ -68,20 +68,20 @@ function dishSet() {
       sideDishList += sideDishes[selected[i]] + " ";
 
       console.log(sideDishList)
-      document.querySelector("#outputSideDish").innerHTML = `Output Test Run =${sideDishList}`;
+      // document.querySelector("#outputSideDish").innerHTML = `Output Test Run =${sideDishList}`;
     }
     
   }
 
   
     addProduct(dishName, "images/logo.jpg", sideDishList, priceDish);
-    displayProduct() 
+    displayDishes() 
 
 };
 
 // Below is the test for the set object
 
-const set1 = {
+/*const set1 = {
   name: "Chicken Wing Set",
   image: "images/Chicken_Wing_Set.jpg",
   sideDishes: "Chicken Wing, Ikan Bilis, Egg Sunny",
@@ -95,10 +95,10 @@ const set1 = {
   price: "6.00"
 }*/
 
-const productList = [];
+/*const productList = [];
 productList.push(set1);
 
-function displayProduct() {
+function displayDishes() {
 
   let display = " ";
 
@@ -142,6 +142,6 @@ function addProduct(dishName, myImage, sideDishList, priceDish) {
 
 addProduct("Redang Beef Set", "images/nasi4.jpg", "Rendang Beef,Egg Sunny, Ikan Bilis", "7.50");
 
-displayProduct();
+displayDishes();
 
-
+*/
