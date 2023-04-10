@@ -15,7 +15,9 @@
 
   <title>Add Remove Dish</title>
 
-  <style></style>
+  <style>
+   
+  </style>
 
 
 </head>
@@ -26,7 +28,7 @@
 
   <!-- Create your form here to input new product after login -->
   <div class="container" id="itemForm">
-    
+
     <header>
       <!-- <h1> Add & Remove Dish Name, Side Dish and Picture</h1> -->
       <h1>Create A Dish Set</h1>
@@ -39,11 +41,13 @@
         <h3>Add Dish Name </h3>
         <label for="addDishName" class="form-control"></label>
         <input type="text" id="addDishName" class="form-control" placeholder="Input Dish Name" />
+        <p id="outputDish"></p>
       </div>
 
       <div class="selectSideDish mt-3">
         <h3>Add Side Dish (Multiple Selection)</h3>
         <p id="selectSideDishes"></p>
+        <p id="outputSideDish"></p>
       </div>
 
       <div class="addPriceSet mt-3">
@@ -52,20 +56,38 @@
         <span class="input-group-text"> SGD
           <input type="integer" class="form-control" id="priceDishSet" placeholder="Key in Price In Number" />
         </span>
-
+        <p id="outputPrice"></p>
       </div>
 
       <div class="selectDishImage mt-3">
         <h3>Add Picture</h3>
-        <label for="myImage" class="form-label">Select a Picture</label>
-        <input type="file" id="myImage" name="myImage"><br><br>
+        <img id="uploadPreview" style="width: 150px; height: 150px;" />
+        <label for="dishImage" class="form-label">Select a Picture</label>
+        <input type="file" id="myImage" name="dishImage" onchange="PreviewImage()" ; />
       </div>
 
     </form>
-    <button class="btn btn-primary" type="submit" onclick="dishSet()">submit</button>
+    <br>
+    <button class="btn btn-primary" type="submit" onClick="dishSet()">Submit</button>
+
   </div>
+  <br>
+  <hr>
+
+  <!-- Below for testing of Output of Set object-->
+  <section>
+
+    <div class="container">
+      <!-- <h5>Output Testing Product Set</h5> -->
+      <div id="list-items">
+        <div id='row' class="row">
+
+        </div>
+      </div>
+    </div>
 
 
+  </section>
 
 
   <!-- Insert footer page -->
