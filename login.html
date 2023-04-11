@@ -35,20 +35,20 @@
         </header>
         <br>
 
-        <form>
+        <form onSubmit="event.preventDefault();">
             <label for="usrname">Username</label>
-            <input type="text" id="usrname" name="usrname" required>
+            <input type="text" id="usrname" name="usrname" required />
 
             <label for="psw">Password</label>
             <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                required>
+                required />
             <div id="passwordHelpBlock" class="form-text">
                 Your password must contain at least one number and one uppercase and lowercase letter, and at least 8 or
                 more characters
             </div>
            
-            <button type="submit" class="btn btn-primary" onClick="linkItemForm()" value="Submit">Submit</button>
+            <button class="btn btn-primary" onClick="linkItemForm()" value="Submit" >Submit</button>
         </form>
 
 

@@ -1,9 +1,10 @@
 // Data below received from backend database. Should be updated almost immediately for any changes
 
-const dishNames = ["Chicken Wing Set", "Fish Set", "Rendang Beef Set", "Sambal Sotong Set"];
+
 const sideDishes = ["Chicken Wing", "Fish", "Rendang Beef", "Sambal Sotong", "Rendang Mutton", "Egg Sunny", "Salted Egg","Ikan Bilis", "Luncheon Meat","Drumstick", "Otah", "Keropok","Tempeh","Long Beans"];
-const images = ["img src=(images/Chicken_Wing_Set.jpg)",]
-const priceDishSets = [4.50, 5.00, 6.00, 5.50];
+//const image = ["img src=(images/Chicken_Wing_Set.jpg)",]
+image = "images/nasi5.jpg";
+
 
 // Update the list in HTML
 
@@ -33,8 +34,14 @@ function PreviewImage() {
 
 function dishSet() {
 
+  const image = document.querySelector("#myImage").files[0];
+  
+
   const dishName = document.querySelector("#addDishName").value;
   // document.querySelector("#outputDish").innerHTML = `Output Test Run = ${dishName}`;
+
+  const descript = document.querySelector("#addText").value;
+  //document.querySelector("#outputText").innerHTML = `Output Test Run = ${descript}`;
 
   const priceDish = document.querySelector("#priceDishSet").value;
   // document.querySelector("#outputPrice").innerHTML = `Output Test Run = ${priceDish}`;
@@ -74,28 +81,32 @@ function dishSet() {
   }
 
   
-    addProduct(dishName, "images/logo.jpg", sideDishList, priceDish);
+    addProduct(dishName, descript, priceDish, image , sideDishList);
     displayDishes() 
 
 };
 
 // Below is the test for the set object
 
-/*const set1 = {
+/* const set1 = {
   name: "Chicken Wing Set",
+  description : " This chicken is from Malaysia",
+  price: "5.00",
   image: "images/Chicken_Wing_Set.jpg",
   sideDishes: "Chicken Wing, Ikan Bilis, Egg Sunny",
-  price: "5.00"
+  
 }
 
-/*const set2 = {
+const set2 = {
   name: "Fish Set",
+  description : "This Fish is from Japan",
+  price: "6.00",
   image: "images/nasi1.jpg",
   sideDishes: "Fish, Ikan Bilis, Egg Sunny",
-  price: "6.00"
-}*/
+  
+}
 
-/*const productList = [];
+const productList = [];
 productList.push(set1);
 
 function displayDishes() {
@@ -112,8 +123,9 @@ function displayDishes() {
                 class="card-img-top" alt="image" />
             <div class="card-body">
                 <h5 class="card-title">${productList[i].name}</h5>
+                <p class="card-title">${productList[i].description}</h5>
                 <p class="card-text">${productList[i].sideDishes}</p>
-                <p class="card-price">Unit Price : SGD ${productList[i].price}</p>
+                <p class="card-price">Unit Price : $ ${productList[i].price}</p>
             </div>
         </div>
     </div>`
@@ -124,15 +136,16 @@ function displayDishes() {
 
 } //End of displayProduct function
 
-function addProduct(dishName, myImage, sideDishList, priceDish) {
+function addProduct(dishName, descript, priceDish, myImage, sideDishList) {
 
   // The parameters will be sent in from another function through the argument
 
   const productItem = {
     name: dishName,
+    description: descript,
+    price: priceDish,
     image: myImage,
     sideDishes: sideDishList,
-    price: priceDish
   }
 
   productList.push(productItem);
@@ -140,8 +153,7 @@ function addProduct(dishName, myImage, sideDishList, priceDish) {
 
 // Below is hardcoded now. The individual property value will be send in via backend.
 
-addProduct("Redang Beef Set", "images/nasi4.jpg", "Rendang Beef,Egg Sunny, Ikan Bilis", "7.50");
+//addProduct("Redang Beef Set", "This is a special beef from Australia", "7.50", "images/nasi4.jpg", "Rendang Beef,Egg Sunny, Ikan Bilis");
 
 displayDishes();
-
 */

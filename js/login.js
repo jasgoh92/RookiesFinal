@@ -60,8 +60,17 @@ myInput.onkeyup = function() {
 }
 
 function linkItemForm() {
-  document.getElementById("itemForm").style.display = "block";
+
+  let keyUserName = document.querySelector("#usrname").value;
+  let keyPassword = document.querySelector("#psw").value;
+  
+  if ( keyUserName == "Team7" && keyPassword == "Abcd1234") {
+
+    //console.log("Testing");
+
+    location.href = "http://127.0.0.1:5501/itemforms.html"
+    
 }
 
-
+}
  
